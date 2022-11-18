@@ -1,0 +1,83 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+.container{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #4158D0;
+background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+
+}
+.calculator{
+    min-width: 300px;
+    max-width: 300px;
+    box-shadow: 0 0  30px #000;
+    border-radius: 10px;
+    background: #fff;
+}
+.monitor{
+    font-size: 20px;
+    height: 150px;
+    padding:30px;
+    word-wrap: break-word;   /*bu ikisi reqemler çox olduqda monitor div-inden çıxmasın */
+    word-break: break-all;
+}
+.buttons{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 4px;
+    padding: 10px;
+    border-top: 1px solid gray;
+}
+button{
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+    border-radius: 60px;
+    padding:5px 10px;
+    font-size: 25px;
+    background-color: blueviolet;
+    color: white;
+
+    /*Text no selection*/
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+button:hover{
+    background-color: rgba(156, 89, 218, 0.74);
+    transform: scale(105%);
+    transition: 300ms transform;
+}
+#equal{
+    height: 120px;
+    grid-column-start: 4;
+    grid-row-start: 4;
+    grid-row-end: 6;
+    background-color: green;
+}
+#equal:hover{
+    background: rgba(85, 162, 85, 0.842);
+}
+#reset{
+    background: red;
+}
+#reset:hover{
+    background: rgba(198, 86, 86, 0.726);
+}
+.number{
+    background: rgba(12, 128, 223, 0.64);
+    color: #000;
+}
+.number:hover{
+    background: rgba(116, 218, 218, 0.77);
+}
